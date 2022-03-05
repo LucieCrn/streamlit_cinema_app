@@ -9,8 +9,8 @@ Created on Wed Feb 23 09:54:38 2022
 # Importer les librairies.
 import streamlit as st
 import pandas as pd
-import os #TO-DO Pensez à passer les chemin en relatif quand tout sera bien dans un dossier. 
-import matplotlib.pyplot as plt
+import os 
+!import matplotlib.pyplot as plt
 import seaborn as sns
 from Movie_Database_Build import search_poster
 import fonctions as fct
