@@ -91,7 +91,7 @@ def onglet_films() :
         
     # Choix d'afficher les affiches des films ou non : 
     with col3 : 
-        choix_affiche = st.selectbox("Afficher les affiches des films (attention très lent", ["Non", "Oui"])
+        choix_affiche = st.selectbox("Afficher les affiches des films (attention très lent)", ["Non", "Oui"])
         
     # Création de la selection des notes. 
     selected_rates = st.slider('Afficher les notes comprises entre :', 0, 10, (0, 10))
