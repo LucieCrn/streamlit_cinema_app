@@ -11,10 +11,12 @@
 
 import urllib.request, urllib.parse, urllib.error
 import json
+import os
 
-
+file = os.path.dirname(__file__)
+APIkey = os.path.join(file, 'APIkey.json')
 # ### Gets the secret API key (you have to get one from OMDB website and use that, 1000 daily limit) from a JSON file, stored in the same folder
-with open("APIkey.json") as f:
+with open(APIkey) as f:
     keys = json.load(f)
     omdbapi = keys['OMDBapi']
 
