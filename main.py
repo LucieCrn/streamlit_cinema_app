@@ -10,7 +10,8 @@ Created on Wed Feb 23 09:54:38 2022
 import streamlit as st
 import pandas as pd
 import os 
-!import matplotlib.pyplot as plt
+import matplotlib
+import matplotlib.pyplot as plt
 import seaborn as sns
 from Movie_Database_Build import search_poster
 import fonctions as fct
