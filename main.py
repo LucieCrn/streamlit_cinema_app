@@ -7,18 +7,17 @@ Created on Wed Feb 23 09:54:38 2022
 """
 
 # Importer les librairies.
-import pip
-pip.main(["install","matplotlib"])
+#import pip
+#pip.main(["install","matplotlib"])
 import streamlit as st
 import pandas as pd
-import os 
-import matplotlib
+import os
 import matplotlib.pyplot as plt
 from Movie_Database_Build import search_poster
 import fonctions as fct
 
 # Chemins
-file = os.getcwd()
+file = os.path.dirname(__file__)
 base_films = os.path.join(file, "data.csv")
 base_watchlist = os.path.join(file, "WATCHLIST.csv")
 folder_affiches = os.path.join(file, "Affiches")
@@ -26,10 +25,10 @@ folder_photos_onglet = os.path.join(file, "Photos_onglets")
 
 
 # Importer les données pour l'onglet "films"
-mes_films = pd.read_csv("data.csv")
+mes_films = pd.read_csv(base_films)
 
 # Importer les données pour l'onglet "watchlist" et suppression des colonnes inutiles
-watchlist_brut = pd.read_csv("WATCHLIST.csv")
+watchlist_brut = pd.read_csv(base_watchlist)
 watchlist = watchlist_brut.drop(['Const',
                                  'Created',
                                  'Modified',
@@ -91,7 +90,7 @@ def onglet_films() :
         
     # Choix d'afficher les affiches des films ou non : 
     with col3 : 
-        choix_affiche = st.selectbox("Afficher les affiches des films (attention très lent)", ["Non", "Oui"])
+        choix_affiche = st.selectbox("Afficher les affiches des films (attention très lent", ["Non", "Oui"])
         
     # Création de la selection des notes. 
     selected_rates = st.slider('Afficher les notes comprises entre :', 0, 10, (0, 10))
