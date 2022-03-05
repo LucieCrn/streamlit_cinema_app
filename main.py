@@ -14,7 +14,6 @@ import pandas as pd
 import os 
 import matplotlib
 import matplotlib.pyplot as plt
-import seaborn as sns
 from Movie_Database_Build import search_poster
 import fonctions as fct
 
