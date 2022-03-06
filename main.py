@@ -7,8 +7,8 @@ Created on Wed Feb 23 09:54:38 2022
 """
 
 # Importer les librairies.
-#import pip
-# pip.main(["install","matplotlib"])
+import pip
+pip.main(["install","matplotlib"])
 import streamlit as st
 import pandas as pd
 import os
